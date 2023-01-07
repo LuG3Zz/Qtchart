@@ -39,5 +39,5 @@ void TcpServer::loadConf()
 TcpServer::~TcpServer()
 {
     delete ui;
-}
 
+}
