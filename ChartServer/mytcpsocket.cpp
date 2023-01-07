@@ -17,7 +17,11 @@ void MyTcpSocket::recvMsg()
   QJsonDocument data=QJsonDocument::fromJson(ba);
   QJsonObject msg = data.object();
   QJsonValue value = msg.value("msg");
-  qDebug()<<value.toString();
+  QJsonValue id = msg.value("id");
+  QJsonValue pwd = msg.value("passwd");
+  qDebug()<<value.toString()<<Qt::endl;
+  qDebug()<<id.toString()<<Qt::endl;
+  qDebug()<<pwd.toString()<<Qt::endl;
 
 
 
